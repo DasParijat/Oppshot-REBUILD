@@ -12,5 +12,5 @@ func _process(delta):
 	# var c = castle.instantiate()
 	# get_tree().root.add_child(c)
 	# c.PLAYER_TYPE = "WASD"
-	# test for git
+	# test for git 2
 	pass

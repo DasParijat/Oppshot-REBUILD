@@ -2,3 +2,8 @@ res://main_game.tscn
 res://castle.gd
 res://main_game.gd
 res://player.gd
+res://menu.tscn
+res://player.tscn
+res://castle.tscn
+res://bullet.tscn
+res://health_component.tscn

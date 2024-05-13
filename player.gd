@@ -30,16 +30,13 @@ func _process(delta):
 		shoot()
 		
 func movement(left_key, right_key, delta):
-	var boundaries = position.y >= 0 && position.y <= 800 
-	if Input.is_action_pressed(left_key) && boundaries:
+	var upper_limit : int = 0
+	var lower_limit : int = 800 
+	if Input.is_action_pressed(left_key) && position.y >= upper_limit: 
 		position += Vector2(0, -SPEED * delta)
-		if !boundaries:
-			position -= Vector2(0, -SPEED * delta)
 	
-	if Input.is_action_pressed(right_key) && boundaries:
+	if Input.is_action_pressed(right_key) && position.y <= lower_limit: 
 		position += Vector2(0, SPEED * delta)
-		if !boundaries:
-			position -= Vector2(0, SPEED * delta)
 		
 
 		
