@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ds885jsafic2v"]
+
+[ext_resource type="Texture2D" uid="uid://ccfxpqrll5wjv" path="res://new hd arrow.png" id="1_kdqd1"]
+[ext_resource type="Script" path="res://player.gd" id="1_r75nm"]
+[ext_resource type="PackedScene" uid="uid://b73x1w3nhjlou" path="res://health_component.tscn" id="3_da2f4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unv6t"]
+size = Vector2(37, 60)
+
+[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("health_component")]
+script = ExtResource("1_r75nm")
+health_component = NodePath("health component")
+
+[node name="Area2D" type="Area2D" parent="." groups=["hittable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-8.5, 1)
+shape = SubResource("RectangleShape2D_unv6t")
+
+[node name="health component" parent="." instance=ExtResource("3_da2f4")]
+
+[node name="NewHdArrow" type="Sprite2D" parent="."]
+texture = ExtResource("1_kdqd1")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 17.823
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(55, 1)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

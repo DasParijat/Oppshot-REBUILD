@@ -1,0 +1,37 @@
+extends StaticBody2D
+@export var PLAYER_TYPE : String
+@export var health_component : Node2D
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+	# Game.WASD_numcastles
+	
+func _on_area_2d_area_entered(area):
+	var tween = create_tween()
+	# print("I collided with ")
+	if health_component:
+		health_component.take_damage()
+		var health_size = health_component.health/10.0
+		tween.tween_property($".", "scale", Vector2(health_size,health_size), 0.2)
+		
+		# console text
+		# var health_string : String = str(health_component.health)
+		# print(health_string + "HP left for " + PLAYER_TYPE + " Castle")
+	
+	# death condition
+	if health_component.health <= 0:
+		print("castle down")
+		if PLAYER_TYPE == "ARW":
+			Game.ARW_numcastles -= 1
+			if Game.ARW_numcastles <= 0:
+				print("WASD WON!")
+		else:
+			Game.WASD_numcastles -= 1
+			if Game.WASD_numcastles  <= 0:
+				print("ARW WON!")
+		queue_free()

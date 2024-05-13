@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbo670rvk66hp"]
+
+[ext_resource type="Script" path="res://main_game.gd" id="1_1f1cw"]
+[ext_resource type="PackedScene" uid="uid://ds885jsafic2v" path="res://player.tscn" id="1_vtc84"]
+[ext_resource type="PackedScene" uid="uid://drw2rqaexm74a" path="res://castle.tscn" id="2_17kr1"]
+
+[node name="main_game" type="Node2D"]
+script = ExtResource("1_1f1cw")
+
+[node name="WASD_player" parent="." instance=ExtResource("1_vtc84")]
+position = Vector2(250, 450)
+PLAYER_TYPE = "WASD"
+
+[node name="ARW_player" parent="." instance=ExtResource("1_vtc84")]
+position = Vector2(900, 450)
+PLAYER_TYPE = "ARW"
+
+[node name="WASD castle 1" parent="." instance=ExtResource("2_17kr1")]
+position = Vector2(116, 169)
+PLAYER_TYPE = "WASD"
+
+[node name="WASD castle 2" parent="." instance=ExtResource("2_17kr1")]
+position = Vector2(104, 434)
+PLAYER_TYPE = "WASD"
+
+[node name="WASD castle 3" parent="." instance=ExtResource("2_17kr1")]
+position = Vector2(116, 721)
+PLAYER_TYPE = "WASD"
+
+[node name="ARW castle 1" parent="." instance=ExtResource("2_17kr1")]
+position = Vector2(1034, 185)
+PLAYER_TYPE = "ARW"
+
+[node name="ARW castle 2" parent="." instance=ExtResource("2_17kr1")]
+position = Vector2(1034, 434)
+PLAYER_TYPE = "ARW"
+
+[node name="ARW castle 3" parent="." instance=ExtResource("2_17kr1")]
+position = Vector2(1035, 736)
+PLAYER_TYPE = "ARW"
