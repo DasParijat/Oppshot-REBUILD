@@ -6,6 +6,7 @@
 
 [node name="main_game" type="Node2D"]
 script = ExtResource("1_1f1cw")
+y_spacing = 270
 
 [node name="WASD_player" parent="." instance=ExtResource("1_vtc84")]
 position = Vector2(250, 450)
@@ -16,25 +17,31 @@ position = Vector2(900, 450)
 PLAYER_TYPE = "ARW"
 
 [node name="WASD castle 1" parent="." instance=ExtResource("2_17kr1")]
+visible = false
 position = Vector2(116, 169)
 PLAYER_TYPE = "WASD"
 
 [node name="WASD castle 2" parent="." instance=ExtResource("2_17kr1")]
+visible = false
 position = Vector2(104, 434)
 PLAYER_TYPE = "WASD"
 
 [node name="WASD castle 3" parent="." instance=ExtResource("2_17kr1")]
+visible = false
 position = Vector2(116, 721)
 PLAYER_TYPE = "WASD"
 
 [node name="ARW castle 1" parent="." instance=ExtResource("2_17kr1")]
+visible = false
 position = Vector2(1034, 185)
 PLAYER_TYPE = "ARW"
 
 [node name="ARW castle 2" parent="." instance=ExtResource("2_17kr1")]
+visible = false
 position = Vector2(1034, 434)
 PLAYER_TYPE = "ARW"
 
 [node name="ARW castle 3" parent="." instance=ExtResource("2_17kr1")]
+visible = false
 position = Vector2(1035, 736)
 PLAYER_TYPE = "ARW"

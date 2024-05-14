@@ -26,7 +26,7 @@ func _process(delta):
 	movement((PLAYER_TYPE + "_left"), (PLAYER_TYPE + "_right"), delta)
 	
 	if Input.is_action_just_pressed(PLAYER_TYPE + "_shoot"):
-		print(position.y)
+		#print(position.y)
 		shoot()
 		
 func movement(left_key, right_key, delta):
@@ -34,6 +34,7 @@ func movement(left_key, right_key, delta):
 	var lower_limit : int = 800 
 	if Input.is_action_pressed(left_key) && position.y >= upper_limit: 
 		position += Vector2(0, -SPEED * delta)
+		#print(DisplayServer.window_get_size())
 	
 	if Input.is_action_pressed(right_key) && position.y <= lower_limit: 
 		position += Vector2(0, SPEED * delta)
