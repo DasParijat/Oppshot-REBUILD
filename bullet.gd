@@ -5,6 +5,8 @@ extends Area2D
 	
 func _process(delta):
 	position += transform.x * speed * delta
+	if position.x > 1200 || position.x < -25:
+		queue_free()
 	
 func _on_area_entered(area):
 	if area.is_in_group("hittable"):

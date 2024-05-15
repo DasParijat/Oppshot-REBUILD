@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var PLAYER_TYPE = ""
 @export var SPEED = 500
 @export var bullet_scene : PackedScene
-@export var health_component : Node2D
+@export var health_component : Node2D 
 var FRICTION = 0.2
 
 @onready var timer = $Timer

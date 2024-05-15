@@ -7,3 +7,4 @@ res://player.tscn
 res://castle.tscn
 res://bullet.tscn
 res://health_component.tscn
+res://bullet.gd
