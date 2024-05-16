@@ -6,15 +6,15 @@ extends Node2D
 func _ready():
 	castle_load("WASD")
 	castle_load("ARW")
-
+	pass
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	# castle = preload("res://castle.tscn")
-	# var c = castle.instantiate()
-	# get_tree().root.add_child(c)
-	# c.PLAYER_TYPE = "WASD"
-	# test for git 2
-	pass
+	if Game.WINNER != "NONE":
+		Game.WINNER = "NONE"
+		Game.set_game()
+		castle_load("WASD")
+		castle_load("ARW")
 
 func player_load(player_type):
 	var player = preload("res://player.tscn").instantiate()

@@ -8,7 +8,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Game.WINNER != "NONE":
+		queue_free()
 	# Game.WASD_numcastles
 	
 func _on_area_2d_area_entered(area):
@@ -29,9 +30,15 @@ func _on_area_2d_area_entered(area):
 		if PLAYER_TYPE == "ARW":
 			Game.ARW_numcastles -= 1
 			if Game.ARW_numcastles <= 0:
+				Game.WASD_WINS += 1
+				Game.WINNER = "WASD"
 				print("WASD WON!")
 		else:
 			Game.WASD_numcastles -= 1
 			if Game.WASD_numcastles  <= 0:
+				Game.ARW_WINS += 1
+				Game.WINNER = "ARW"
 				print("ARW WON!")
 		queue_free()
+	
+

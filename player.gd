@@ -29,6 +29,9 @@ func _process(delta):
 		#print(position.y)
 		shoot()
 		
+	if Game.WINNER != "NONE":
+		queue_free()
+		
 func movement(left_key, right_key, delta):
 	var upper_limit : int = 0
 	var lower_limit : int = 800 
