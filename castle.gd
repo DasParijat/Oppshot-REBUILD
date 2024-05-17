@@ -4,7 +4,8 @@ extends StaticBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	if PLAYER_TYPE == "ARW":
+		$Icon.modulate = Color8(255, 119, 102) 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

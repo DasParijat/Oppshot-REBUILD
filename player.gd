@@ -12,8 +12,10 @@ var FRICTION = 0.2
 func _ready():
 	if PLAYER_TYPE == "ARW":
 		scale.x=-1
+		$NewHdArrow.modulate = Color8(255, 119, 102) 
 	timer.timeout.connect(_on_timer_timeout)
 	timer.start()
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

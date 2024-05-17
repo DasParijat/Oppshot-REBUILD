@@ -1,25 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbo670rvk66hp"]
+[gd_scene load_steps=3 format=3 uid="uid://dbo670rvk66hp"]
 
 [ext_resource type="Script" path="res://main_game.gd" id="1_1f1cw"]
+[ext_resource type="Texture2D" uid="uid://dsxp7y2onet4f" path="res://rebuild dark background.png" id="2_fdebl"]
 
 [node name="main_game" type="Node2D"]
 script = ExtResource("1_1f1cw")
 y_spacing = 292
 
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(586, 440)
+texture = ExtResource("2_fdebl")
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.005
 one_shot = true
 
-[node name="WASD_wincounter" type="RichTextLabel" parent="."]
+[node name="WASD_counter" type="Label" parent="."]
+custom_minimum_size = Vector2(0, -800)
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 23.0
 text = "0"
 
-[node name="ARW_wincounter" type="RichTextLabel" parent="."]
-offset_left = 417.0
-offset_top = 439.0
-offset_right = 457.0
-offset_bottom = 479.0
+[node name="ARW_counter" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
 text = "0"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
