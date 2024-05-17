@@ -1,3 +1,5 @@
+RichTextLabel
+Timer
 PointLight2D
 DirectionalLight2D
 StaticBody2D
@@ -8,6 +10,5 @@ CollisionShape2D
 Node2D
 Marker2D
 Sprite2D
-Timer
 TextureButton
 Button

@@ -28,9 +28,11 @@ func _process(delta):
 	if Input.is_action_just_pressed(PLAYER_TYPE + "_shoot"):
 		#print(position.y)
 		shoot()
-		
+	
 	if Game.WINNER != "NONE":
-		queue_free()
+		print("im gone fr yo")
+		queue_free()		
+	
 		
 func movement(left_key, right_key, delta):
 	var upper_limit : int = 0
@@ -42,7 +44,6 @@ func movement(left_key, right_key, delta):
 	if Input.is_action_pressed(right_key) && position.y <= lower_limit: 
 		position += Vector2(0, SPEED * delta)
 		
-
 		
 
 func shoot():
@@ -72,3 +73,5 @@ func _on_area_2d_area_entered(area):
 	# death condition
 	if health_component.health <= 0:
 		queue_free()
+		
+

@@ -4,17 +4,16 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	player_load("WASD")
 	castle_load("WASD")
+	player_load("ARW")
 	castle_load("ARW")
-	pass
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Game.WINNER != "NONE":
-		Game.WINNER = "NONE"
-		Game.set_game()
-		castle_load("WASD")
-		castle_load("ARW")
+		$Timer.start()
+		
 
 func player_load(player_type):
 	var player = preload("res://player.tscn").instantiate()
@@ -28,9 +27,7 @@ func player_load(player_type):
 				player.position = Vector2(923 ,450)
 	add_child(player)
 	
-func castle_load(player_type):
-	player_load(player_type)
-	
+func castle_load(player_type):	
 	for i in range(3):
 		var castle = preload("res://castle.tscn").instantiate()
 		castle.PLAYER_TYPE = player_type
@@ -42,3 +39,12 @@ func castle_load(player_type):
 				castle.position = Vector2(1075,146 + (i * y_spacing))
 		add_child(castle)
 	
+
+
+func _on_timer_timeout():
+	Game.WINNER = "NONE"
+	Game.set_game()
+	player_load("WASD")
+	castle_load("WASD")
+	player_load("ARW")
+	castle_load("ARW")

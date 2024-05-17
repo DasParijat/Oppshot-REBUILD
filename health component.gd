@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var MAX_HEALTH : float = 10
+@export var MAX_HEALTH : float = 5
 var health = MAX_HEALTH
 
 # Called when the node enters the scene tree for the first time.
