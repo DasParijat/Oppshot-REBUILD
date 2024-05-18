@@ -4,10 +4,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	player_load("WASD")
-	castle_load("WASD")
-	player_load("ARW")
-	castle_load("ARW")
+	main_set_game()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -40,11 +37,15 @@ func castle_load(player_type):
 		add_child(castle)
 	
 
-
-func _on_timer_timeout():
-	Game.WINNER = "NONE"
-	Game.set_game()
+func main_set_game():
+	$WASD_counter.text = str(Game.WASD_WINS)
+	$ARW_counter.text = str(Game.ARW_WINS)
 	player_load("WASD")
 	castle_load("WASD")
 	player_load("ARW")
 	castle_load("ARW")
+
+func _on_timer_timeout():
+	Game.WINNER = "NONE"
+	Game.set_game()
+	main_set_game()
