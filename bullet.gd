@@ -1,7 +1,16 @@
 extends Area2D
 
 @export var speed = 750
+@export var player_type : String
 
+func _ready():
+	match(player_type):
+		"WASD":
+			$Icon.modulate = Game.WASD_color
+		"ARW":
+			$Icon.modulate = Game.ARW_color
+		_: # default statement in java
+			$Icon.modulate = Color8(255, 255, 255)
 	
 func _process(delta):
 	position += transform.x * speed * delta

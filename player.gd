@@ -4,17 +4,19 @@ extends CharacterBody2D
 @export var SPEED = 500
 @export var bullet_scene : PackedScene
 @export var health_component : Node2D 
+var can_shoot : bool = true
 var FRICTION = 0.2
 
-@onready var timer = $Timer
+#@onready var timer = $Timer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$NewHdArrow.modulate = Game.WASD_color
 	if PLAYER_TYPE == "ARW":
 		scale.x=-1
-		$NewHdArrow.modulate = Color8(255, 119, 102) 
-	timer.timeout.connect(_on_timer_timeout)
-	timer.start()
+		$NewHdArrow.modulate = Game.ARW_color
+	#timer.timeout.connect(_on_timer_timeout)
+	#timer.start()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,9 +29,11 @@ func _process(delta):
 	
 	movement((PLAYER_TYPE + "_left"), (PLAYER_TYPE + "_right"), delta)
 	
-	if Input.is_action_just_pressed(PLAYER_TYPE + "_shoot"):
+	if Input.is_action_just_pressed(PLAYER_TYPE + "_shoot") && can_shoot:
 		#print(position.y)
+		can_shoot = false
 		shoot()
+		$Timer.start()
 	
 	if Game.WINNER != "NONE":
 		print("im gone fr yo")
@@ -51,11 +55,12 @@ func movement(left_key, right_key, delta):
 func shoot():
 	bullet_scene = preload("res://bullet.tscn")
 	var b = bullet_scene.instantiate()
+	b.player_type = PLAYER_TYPE
 	get_tree().root.add_child(b)
 	b.transform = $Marker2D.global_transform
 
 func _on_timer_timeout():
-	pass
+	can_shoot = true
 
 func _on_area_2d_area_entered(area):
 	var tween = create_tween()

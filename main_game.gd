@@ -9,7 +9,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Game.WINNER != "NONE":
-		$Timer.start()
+		$ResetGameTimer.start()
 		
 
 func player_load(player_type):
@@ -39,7 +39,10 @@ func castle_load(player_type):
 
 func main_set_game():
 	$WASD_counter.text = str(Game.WASD_WINS)
+	$WASD_counter.modulate = Game.WASD_color
 	$ARW_counter.text = str(Game.ARW_WINS)
+	$ARW_counter.modulate = Game.ARW_color
+	Game.reset_max_castles()
 	player_load("WASD")
 	castle_load("WASD")
 	player_load("ARW")
@@ -47,5 +50,4 @@ func main_set_game():
 
 func _on_timer_timeout():
 	Game.WINNER = "NONE"
-	Game.set_game()
 	main_set_game()

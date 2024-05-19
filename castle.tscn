@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://drw2rqaexm74a"]
 
 [ext_resource type="Script" path="res://castle.gd" id="1_328ku"]
-[ext_resource type="Texture2D" uid="uid://cd5hnwgh54pke" path="res://icon.svg" id="1_xmr80"]
 [ext_resource type="PackedScene" uid="uid://b73x1w3nhjlou" path="res://health_component.tscn" id="2_hotyk"]
+[ext_resource type="Texture2D" uid="uid://b7360jhep0r6" path="res://OSR Castle.png" id="3_t0rvw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_824rm"]
 radius = 22.1359
@@ -20,6 +20,7 @@ shape = SubResource("CircleShape2D_824rm")
 [node name="health component" parent="." instance=ExtResource("2_hotyk")]
 
 [node name="Icon" type="Sprite2D" parent="."]
-texture = ExtResource("1_xmr80")
+scale = Vector2(1.815, 1.815)
+texture = ExtResource("3_t0rvw")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
