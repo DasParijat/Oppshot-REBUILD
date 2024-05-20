@@ -39,3 +39,4 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="timeout" from="ResetGameTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="PlayerRespawnTimer" to="." method="_on_player_respawn_timer_timeout"]

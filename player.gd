@@ -5,18 +5,19 @@ extends CharacterBody2D
 @export var bullet_scene : PackedScene
 @export var health_component : Node2D 
 var can_shoot : bool = true
+var can_move : bool = true
 var FRICTION = 0.2
-
-#@onready var timer = $Timer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$NewHdArrow.modulate = Game.WASD_color
-	if PLAYER_TYPE == "ARW":
-		scale.x=-1
-		$NewHdArrow.modulate = Game.ARW_color
-	#timer.timeout.connect(_on_timer_timeout)
-	#timer.start()
+	match(PLAYER_TYPE):
+		"WASD":
+			Game.WASD_alive = true
+			$NewHdArrow.modulate = Game.WASD_color
+		"ARW":
+			scale.x = -1
+			Game.ARW_alive = true
+			$NewHdArrow.modulate = Game.ARW_color
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -43,12 +44,13 @@ func _process(delta):
 func movement(left_key, right_key, delta):
 	var upper_limit : int = 0
 	var lower_limit : int = 800 
-	if Input.is_action_pressed(left_key) && position.y >= upper_limit: 
-		position += Vector2(0, -SPEED * delta)
-		#print(DisplayServer.window_get_size())
-	
-	if Input.is_action_pressed(right_key) && position.y <= lower_limit: 
-		position += Vector2(0, SPEED * delta)
+	if can_move:
+		if Input.is_action_pressed(left_key) && position.y >= upper_limit: 
+			position += Vector2(0, -SPEED * delta)
+			#print(DisplayServer.window_get_size())
+		
+		if Input.is_action_pressed(right_key) && position.y <= lower_limit: 
+			position += Vector2(0, SPEED * delta)
 		
 		
 
@@ -79,6 +81,24 @@ func _on_area_2d_area_entered(area):
 	
 	# death condition
 	if health_component.health <= 0:
-		queue_free()
+		#use can_move to stop movement while player grows back to size
+		#create timer to have more space between moving
+		can_shoot = false
+		can_move = false
+		match(PLAYER_TYPE):
+			"WASD":
+				position = Vector2(250 ,450)
+				tween.tween_property($".", "scale", Vector2(1,1), 1)
+				Game.WASD_alive = false
+				print("wasd dead")
+			"ARW":
+				position = Vector2(923 ,450)
+				tween.tween_property($".", "scale", Vector2(-1,1), 1)
+				Game.ARW_alive = false
+				print("arw dead")
+		can_shoot = true
+		can_move = true	
+		
+		#queue_free()
 		
 
