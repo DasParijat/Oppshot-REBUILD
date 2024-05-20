@@ -1,12 +1,12 @@
 extends Node2D
 
+# base health
 @export var MAX_HEALTH : float = 5
-var health = MAX_HEALTH
+var health : float
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	health = MAX_HEALTH
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

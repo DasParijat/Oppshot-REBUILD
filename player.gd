@@ -4,12 +4,15 @@ extends CharacterBody2D
 @export var SPEED = 500
 @export var bullet_scene : PackedScene
 @export var health_component : Node2D 
+
 var can_shoot : bool = true
 var can_move : bool = true
+var can_damaged : bool = true
 var FRICTION = 0.2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	health_component.health = 10
 	match(PLAYER_TYPE):
 		"WASD":
 			Game.WASD_alive = true
@@ -67,24 +70,28 @@ func _on_timer_timeout():
 func _on_area_2d_area_entered(area):
 	var tween = create_tween()
 	# print("I collided with ")
-	if health_component:
+	if health_component && can_damaged:
 		health_component.take_damage()
 		var health_size = health_component.health/10.0
 		var x_multiplier = 1
 		if PLAYER_TYPE == "ARW":
 			x_multiplier = -1
 		tween.tween_property($".", "scale", Vector2((health_size * x_multiplier),health_size), 0.2)
-		
+	
+	death_condition(tween)
 		# console text
 		# var health_string : String = str(health_component.health)
 		# print(health_string + "HP left for " + PLAYER_TYPE)
-	
+		
+func death_condition(tween):
 	# death condition
-	if health_component.health <= 0:
+	if health_component.health <= 0 && can_damaged:
 		#use can_move to stop movement while player grows back to size
 		#create timer to have more space between moving
 		can_shoot = false
 		can_move = false
+		can_damaged = false
+		#$RespawnTimer.start()
 		match(PLAYER_TYPE):
 			"WASD":
 				position = Vector2(250 ,450)
@@ -96,9 +103,12 @@ func _on_area_2d_area_entered(area):
 				tween.tween_property($".", "scale", Vector2(-1,1), 1)
 				Game.ARW_alive = false
 				print("arw dead")
+		await tween.finished
 		can_shoot = true
-		can_move = true	
+		can_move = true
+		can_damaged = true
 		
-		#queue_free()
-		
-
+func _on_respawn_timer_timeout():
+	can_shoot = true
+	can_move = true
+	can_damaged = true
