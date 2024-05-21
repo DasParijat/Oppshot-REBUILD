@@ -76,7 +76,7 @@ func _on_area_2d_area_entered(area):
 		var x_multiplier = 1
 		if PLAYER_TYPE == "ARW":
 			x_multiplier = -1
-		tween.tween_property($".", "scale", Vector2((health_size * x_multiplier),health_size), 0.2)
+		tween.tween_property(self, "scale", Vector2((health_size * x_multiplier),health_size), 0.2)
 	
 	death_condition(tween)
 		# console text
@@ -92,23 +92,25 @@ func death_condition(tween):
 		can_move = false
 		can_damaged = false
 		#$RespawnTimer.start()
+		$NewHdArrow.self_modulate.a = 0.5
 		match(PLAYER_TYPE):
 			"WASD":
 				position = Vector2(250 ,450)
-				tween.tween_property($".", "scale", Vector2(1,1), 1)
+				tween.tween_property(self, "scale", Vector2(1,1), 1)
 				Game.WASD_alive = false
 				print("wasd dead")
 			"ARW":
 				position = Vector2(923 ,450)
-				tween.tween_property($".", "scale", Vector2(-1,1), 1)
+				tween.tween_property(self, "scale", Vector2(-1,1), 1)
 				Game.ARW_alive = false
 				print("arw dead")
 		await tween.finished
-		can_shoot = true
 		can_move = true
-		can_damaged = true
+		$RespawnTimer.start()
 		
 func _on_respawn_timer_timeout():
+	$NewHdArrow.self_modulate.a = 1
 	can_shoot = true
 	can_move = true
 	can_damaged = true
+	health_component.health = 10
