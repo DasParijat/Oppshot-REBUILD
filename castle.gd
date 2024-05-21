@@ -19,7 +19,7 @@ func _on_area_2d_area_entered(area):
 	# print("I collided with ")
 	if health_component:
 		health_component.take_damage()
-		var health_size = health_component.health/5.0
+		var health_size = (health_component.health/5.0) + 0.2
 		tween.tween_property($".", "scale", Vector2(health_size,health_size), 0.2)
 		
 		# console text
@@ -28,7 +28,8 @@ func _on_area_2d_area_entered(area):
 	
 	# death condition
 	if health_component.health <= 0:
-		print("castle down")
+		#await tween.finished
+		tween.tween_property($".", "scale", Vector2(0,0), 0.2)
 		if PLAYER_TYPE == "ARW":
 			Game.ARW_numcastles -= 1
 			if Game.ARW_numcastles <= 0:
@@ -43,6 +44,7 @@ func _on_area_2d_area_entered(area):
 				Game.WINNER = "ARW"
 				print(Game.ARW_WINS)
 				print("ARW WON!")
+		await tween.finished
 		queue_free()
 	
 

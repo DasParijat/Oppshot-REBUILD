@@ -8,17 +8,20 @@ extends CharacterBody2D
 var can_shoot : bool = true
 var can_move : bool = true
 var can_damaged : bool = true
+
+var MAX_HEALTH = 10
 var FRICTION = 0.2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	health_component.health = 10
+	health_component.health = MAX_HEALTH
 	match(PLAYER_TYPE):
 		"WASD":
+			self.scale = Vector2(1.5, 1.5)
 			Game.WASD_alive = true
 			$NewHdArrow.modulate = Game.WASD_color
 		"ARW":
-			scale.x = -1
+			self.scale = Vector2(-1.5, 1.5)
 			Game.ARW_alive = true
 			$NewHdArrow.modulate = Game.ARW_color
 	
@@ -72,7 +75,9 @@ func _on_area_2d_area_entered(area):
 	# print("I collided with ")
 	if health_component && can_damaged:
 		health_component.take_damage()
-		var health_size = health_component.health/10.0
+		print(health_component.health)
+		var health_size = (health_component.health/10.0) + 0.5
+		print(health_size)
 		var x_multiplier = 1
 		if PLAYER_TYPE == "ARW":
 			x_multiplier = -1
@@ -91,17 +96,19 @@ func death_condition(tween):
 		can_shoot = false
 		can_move = false
 		can_damaged = false
+		tween.tween_property(self, "scale", Vector2(0,0), 0.2)
+		#await tween.finished
 		#$RespawnTimer.start()
 		$NewHdArrow.self_modulate.a = 0.5
 		match(PLAYER_TYPE):
 			"WASD":
 				position = Vector2(250 ,450)
-				tween.tween_property(self, "scale", Vector2(1,1), 1)
+				tween.tween_property(self, "scale", Vector2(1.5,1.5), 1)
 				Game.WASD_alive = false
 				print("wasd dead")
 			"ARW":
 				position = Vector2(923 ,450)
-				tween.tween_property(self, "scale", Vector2(-1,1), 1)
+				tween.tween_property(self, "scale", Vector2(-1.5,1.5), 1)
 				Game.ARW_alive = false
 				print("arw dead")
 		await tween.finished
