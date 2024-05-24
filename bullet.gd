@@ -7,8 +7,10 @@ func _ready():
 	match(player_type):
 		"WASD":
 			$Icon.modulate = Game.WASD_color
+			$PointLight2D.set_color(Game.WASD_color)
 		"ARW":
 			$Icon.modulate = Game.ARW_color
+			$PointLight2D.set_color(Game.ARW_color)
 		_: # default statement in java
 			$Icon.modulate = Color8(255, 255, 255)
 	

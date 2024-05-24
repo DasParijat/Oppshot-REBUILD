@@ -5,8 +5,10 @@ extends StaticBody2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Icon.modulate = Game.WASD_color
+	$PointLight2D.set_color(Game.WASD_color)
 	if PLAYER_TYPE == "ARW":
 		$Icon.modulate = Game.ARW_color
+		$PointLight2D.set_color(Game.ARW_color)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

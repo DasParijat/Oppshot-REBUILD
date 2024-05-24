@@ -15,15 +15,19 @@ var FRICTION = 0.2
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	health_component.health = MAX_HEALTH
+	var light = $PointLight2D
 	match(PLAYER_TYPE):
 		"WASD":
 			self.scale = Vector2(1.5, 1.5)
 			Game.WASD_alive = true
 			$NewHdArrow.modulate = Game.WASD_color
+			light.set_color(Game.WASD_color) #= Game.WASD_color
 		"ARW":
 			self.scale = Vector2(-1.5, 1.5)
 			Game.ARW_alive = true
 			$NewHdArrow.modulate = Game.ARW_color
+			light.set_color(Game.ARW_color)
+			#light.from_hsv = Game.ARW_color
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
