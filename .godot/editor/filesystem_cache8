@@ -1,22 +1,25 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716316709
+::res://::1716519206
 bullet.gd::GDScript::-1::1716084141::0::1::::<>Area2D<>::
-bullet.tscn::PackedScene::2022329743850582137::1716287455::0::1::::<><>::res://bullet.gd<>uid://cmxu0e28g8kw::::res://OSR Bullet.png
-castle.gd::GDScript::-1::1716083055::0::1::::<>StaticBody2D<>::
-castle.tscn::PackedScene::8399559261402835882::1716287455::0::1::::<><>::res://castle.gd<>uid://b73x1w3nhjlou::::res://health_component.tscn<>uid://b7360jhep0r6::::res://OSR Castle.png
-health component.gd::GDScript::-1::1716204628::0::1::::<>Node2D<>::
-health_component.tscn::PackedScene::4691710378067575668::1716287455::0::1::::<><>::res://health component.gd
+bullet.tscn::PackedScene::2022329743850582137::1716519057::0::1::::<><>::res://bullet.gd<>uid://cmxu0e28g8kw::::res://OSR Bullet.png
+castle.gd::GDScript::-1::1716318694::0::1::::<>StaticBody2D<>::
+castle.tscn::PackedScene::8399559261402835882::1716519057::0::1::::<><>::res://castle.gd<>uid://b73x1w3nhjlou::::res://health_component.tscn<>uid://b7360jhep0r6::::res://OSR Castle.png
+health component.gd::GDScript::-1::1716317946::0::1::::<>Node2D<>::
+health_component.tscn::PackedScene::4691710378067575668::1716519057::0::1::::<><>::res://health component.gd
 icon.svg::CompressedTexture2D::5045788630334046652::1710334789::1710334797::1::::<><>::
-main_game.gd::GDScript::-1::1716169749::0::1::::<>Node2D<>::
-main_game.tscn::PackedScene::7260292895769079921::1716287455::0::1::::<><>::res://main_game.gd<>uid://dsxp7y2onet4f::::res://rebuild dark background.png
-menu.gd::GDScript::-1::1712281330::0::1::::<>Node2D<>::
-menu.tscn::PackedScene::4245732468547125432::1716287455::0::1::::<><>::res://menu.gd
+main_game.gd::GDScript::-1::1716316726::0::1::::<>Node2D<>::
+main_game.tscn::PackedScene::7260292895769079921::1716519057::0::1::::<><>::res://main_game.gd<>uid://ct1r3ap4dy5f3::::res://rebuild brick background.png
+menu.gd::GDScript::-1::1716516471::0::1::::<>Node2D<>::
+menu.tscn::PackedScene::4245732468547125432::1716519131::0::1::::<><>::res://menu.gd<>uid://c1sqnvmhbvv0e::::res://rebuild brick menu background.png
 new hd arrow.png::CompressedTexture2D::4924965088325739487::1710335232::1710335232::1::::<><>::
 OSR Bullet.png::CompressedTexture2D::166583747570609806::1716083711::1716083726::1::::<><>::
 OSR Castle.png::CompressedTexture2D::138005694487463709::1716082222::1716083735::1::::<><>::
+OSR Logo.png::CompressedTexture2D::8086051532283631372::1716519206::1716519208::1::::<><>::
 OSR Player.png::CompressedTexture2D::4089535135911662428::1716082637::1716082658::1::::<><>::
-player.gd::GDScript::-1::1716287407::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::8492843437549929027::1716316696::0::1::::<><>::res://player.gd<>uid://b73x1w3nhjlou::::res://health_component.tscn<>uid://byjabtn3uh7mm::::res://OSR Player.png
+player.gd::GDScript::-1::1716318804::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::8492843437549929027::1716519057::0::1::::<><>::res://player.gd<>uid://b73x1w3nhjlou::::res://health_component.tscn<>uid://byjabtn3uh7mm::::res://OSR Player.png
+rebuild brick background.png::CompressedTexture2D::6161185433715419278::1716517906::1716517910::1::::<><>::
+rebuild brick menu background.png::CompressedTexture2D::6635905910601387970::1716519053::1716519056::1::::<><>::
 rebuild dark background.png::CompressedTexture2D::8471111128127485723::1715945081::1715945095::1::::<><>::
 ::res://Global/::1716169508
 Game.gd::GDScript::-1::1716169508::0::1::::<>Node<>::
