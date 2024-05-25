@@ -52,7 +52,7 @@ func _process(delta):
 	
 		
 func movement(left_key, right_key, delta):
-	var upper_limit : int = 0
+	var upper_limit : int = 77
 	var lower_limit : int = 800 
 	if can_move:
 		if Input.is_action_pressed(left_key) && position.y >= upper_limit: 

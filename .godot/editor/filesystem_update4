@@ -10,3 +10,4 @@ res://health_component.tscn
 res://health component.gd
 res://menu.gd
 res://bullet.gd
+res://Global/Game.gd

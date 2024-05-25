@@ -12,7 +12,7 @@ position = Vector2(586, 440)
 texture = ExtResource("2_nlibk")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.47451, 0.47451, 0.47451, 1)
+color = Color(0.435294, 0.419608, 0.494118, 1)
 
 [node name="ResetGameTimer" type="Timer" parent="."]
 wait_time = 0.005
@@ -21,6 +21,7 @@ one_shot = true
 [node name="PlayerRespawnTimer" type="Timer" parent="."]
 
 [node name="WASD_counter" type="Label" parent="."]
+top_level = true
 custom_minimum_size = Vector2(0, -800)
 offset_left = 480.0
 offset_top = 750.0
@@ -32,6 +33,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ARW_counter" type="Label" parent="."]
+top_level = true
 offset_left = 650.0
 offset_top = 776.0
 offset_right = 690.0
