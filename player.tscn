@@ -23,19 +23,19 @@ shape = SubResource("RectangleShape2D_unv6t")
 [node name="NewHdArrow" type="Sprite2D" parent="."]
 texture = ExtResource("3_ek3vw")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.15
-one_shot = true
-
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(55, 1)
-
-[node name="RespawnTimer" type="Timer" parent="."]
-one_shot = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 texture = ExtResource("4_4qx66")
 texture_scale = 0.6
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+
+[node name="RespawnTimer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

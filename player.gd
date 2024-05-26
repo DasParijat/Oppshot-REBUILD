@@ -76,7 +76,6 @@ func _on_timer_timeout():
 
 func _on_area_2d_area_entered(area):
 	var tween = create_tween()
-	# print("I collided with ")
 	if health_component && can_damaged:
 		health_component.take_damage()
 		print(health_component.health)
@@ -125,3 +124,4 @@ func _on_respawn_timer_timeout():
 	can_move = true
 	can_damaged = true
 	health_component.health = 10
+
