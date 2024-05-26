@@ -15,42 +15,38 @@ func _ready():
 func _process(delta):
 	if Game.WINNER != "NONE":
 		queue_free()
-	# Game.WASD_numcastles
 	
 func _on_area_2d_area_entered(area):
 	var tween = create_tween()
-	# print("I collided with ")
 	if health_component && can_damaged:
 		health_component.take_damage()
 		var health_size = (health_component.health/5.0) + 0.2
 		tween.tween_property($".", "scale", Vector2(health_size,health_size), 0.2)
-		
-		# console text
-		# var health_string : String = str(health_component.health)
-		# print(health_string + "HP left for " + PLAYER_TYPE + " Castle")
 	
 	# death condition
-	if health_component.health <= 0:
+	death_condition(tween)
+
+func death_condition(tween):
+	if health_component.health <= 0 && can_damaged:
 		#await tween.finished
 		can_damaged = false
 		tween.tween_property($".", "scale", Vector2(0,0), 0.2)
-		print(Game.WASD_numcastles)
+		#print(Game.WASD_numcastles)
 		if PLAYER_TYPE == "ARW":
 			Game.ARW_numcastles -= 1
 			if Game.ARW_numcastles <= 0:
 				Game.WASD_WINS += 1
 				Game.WINNER = "WASD"
-				print(Game.WASD_WINS)
-				print("WASD WON!")
+				#print(Game.WASD_WINS)
+				#print("WASD WON!")
 		else:
 			Game.WASD_numcastles -= 1
-			print(Game.WASD_numcastles)
+			#print(Game.ARW_numcastles)
 			if Game.WASD_numcastles <= 0:
 				Game.ARW_WINS += 1
 				Game.WINNER = "ARW"
-				print(Game.ARW_WINS)
-				print("ARW WON!")
+				#print(Game.ARW_WINS)
+				#print("ARW WON!")
 		await tween.finished
 		queue_free()
-	
 

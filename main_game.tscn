@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbo670rvk66hp"]
+[gd_scene load_steps=5 format=3 uid="uid://dbo670rvk66hp"]
 
 [ext_resource type="Script" path="res://main_game.gd" id="1_1f1cw"]
 [ext_resource type="Texture2D" uid="uid://ct1r3ap4dy5f3" path="res://rebuild brick background.png" id="2_nlibk"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gbmt2"]
+blend_mode = 1
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hka4c"]
+blend_mode = 1
+light_mode = 1
 
 [node name="main_game" type="Node2D"]
 script = ExtResource("1_1f1cw")
@@ -22,6 +30,7 @@ one_shot = true
 
 [node name="WASD_counter" type="Label" parent="."]
 top_level = true
+material = SubResource("CanvasItemMaterial_gbmt2")
 custom_minimum_size = Vector2(0, -800)
 offset_left = 480.0
 offset_top = 750.0
@@ -34,6 +43,7 @@ vertical_alignment = 1
 
 [node name="ARW_counter" type="Label" parent="."]
 top_level = true
+material = SubResource("CanvasItemMaterial_hka4c")
 offset_left = 650.0
 offset_top = 776.0
 offset_right = 690.0
