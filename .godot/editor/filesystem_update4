@@ -1,13 +1,12 @@
-res://menu.tscn
+res://castle.tscn
 res://castle.gd
 res://main_game.gd
 res://player.gd
-res://playmessage.gdshader
-res://pressanyplay.gdshader
 res://menu.gd
+res://playmessage.gdshader
 res://flash.gdshader
-res://main_game.tscn
 res://player.tscn
-res://castle.tscn
+res://main_game.tscn
+res://menu.tscn
 res://bullet.tscn
 res://health_component.tscn

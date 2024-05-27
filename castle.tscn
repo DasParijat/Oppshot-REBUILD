@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://castle.gd" id="1_328ku"]
 [ext_resource type="PackedScene" uid="uid://b73x1w3nhjlou" path="res://health_component.tscn" id="2_hotyk"]
-[ext_resource type="Texture2D" uid="uid://b7360jhep0r6" path="res://OSR Castle.png" id="3_t0rvw"]
+[ext_resource type="Texture2D" uid="uid://dfixkg6jeqp2h" path="res://OSR Castle.png" id="3_t0rvw"]
 [ext_resource type="Texture2D" uid="uid://cyf0b53wd6efk" path="res://OSR_light.png" id="4_oomxo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_824rm"]
@@ -28,5 +28,9 @@ texture = ExtResource("3_t0rvw")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 texture = ExtResource("4_oomxo")
 texture_scale = 0.6
+
+[node name="hit_audio" type="AudioStreamPlayer2D" parent="."]
+
+[node name="death_audio" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

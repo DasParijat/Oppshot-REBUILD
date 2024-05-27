@@ -1,28 +1,31 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716687002
+::res://::1716775453
 bullet.gd::GDScript::-1::1716600044::0::1::::<>Area2D<>::
-bullet.tscn::PackedScene::2022329743850582137::1716671470::0::1::::<><>::res://bullet.gd<>uid://cmxu0e28g8kw::::res://OSR Bullet.png<>uid://cyf0b53wd6efk::::res://OSR_light.png
-castle.gd::GDScript::-1::1716600044::0::1::::<>StaticBody2D<>::
-castle.tscn::PackedScene::8399559261402835882::1716671470::0::1::::<><>::res://castle.gd<>uid://b73x1w3nhjlou::::res://health_component.tscn<>uid://b7360jhep0r6::::res://OSR Castle.png<>uid://cyf0b53wd6efk::::res://OSR_light.png
+bullet.tscn::PackedScene::2022329743850582137::1716775393::0::1::::<><>::res://bullet.gd<>res://OSR Bullet.png<>uid://cyf0b53wd6efk::::res://OSR_light.png
+castle.gd::GDScript::-1::1716775159::0::1::::<>StaticBody2D<>::
+castle.tscn::PackedScene::8399559261402835882::1716775393::0::1::::<><>::res://castle.gd<>uid://b73x1w3nhjlou::::res://health_component.tscn<>res://OSR Castle.png<>uid://cyf0b53wd6efk::::res://OSR_light.png
+flash.gdshader::Shader::-1::1716775393::0::1::::<><>::
 health component.gd::GDScript::-1::1716317946::0::1::::<>Node2D<>::
-health_component.tscn::PackedScene::4691710378067575668::1716671471::0::1::::<><>::res://health component.gd
+health_component.tscn::PackedScene::4691710378067575668::1716775393::0::1::::<><>::res://health component.gd
 icon.svg::CompressedTexture2D::5045788630334046652::1710334789::1710334797::1::::<><>::
-main_game.gd::GDScript::-1::1716316726::0::1::::<>Node2D<>::
-main_game.tscn::PackedScene::7260292895769079921::1716671470::0::1::::<><>::res://main_game.gd<>uid://ct1r3ap4dy5f3::::res://rebuild brick background.png
-menu.gd::GDScript::-1::1716671539::0::1::::<>Node2D<>::
-menu.tscn::PackedScene::4245732468547125432::1716686952::0::1::::<><>::res://menu.gd<>uid://c1sqnvmhbvv0e::::res://rebuild brick menu background.png<>uid://dng7c78gxc5au::::res://OSR Logo.png<>uid://eryucnmg6o2c::::res://OSR_anyplay.png
+main_game.gd::GDScript::-1::1716775159::0::1::::<>Node2D<>::
+main_game.tscn::PackedScene::7260292895769079921::1716775393::0::1::::<><>::res://main_game.gd<>uid://ct1r3ap4dy5f3::::res://rebuild brick background.png
+menu.gd::GDScript::-1::1716775160::0::1::::<>Node2D<>::
+menu.tscn::PackedScene::4245732468547125432::1716775393::0::1::::<><>::res://menu.gd<>uid://c1sqnvmhbvv0e::::res://rebuild brick menu background.png<>uid://bxnyb331pc68k::::res://unaffected_canvasitem.tres<>uid://dng7c78gxc5au::::res://OSR Logo.png<>uid://eryucnmg6o2c::::res://OSR_anyplay.png
 new hd arrow.png::CompressedTexture2D::4924965088325739487::1710335232::1710335232::1::::<><>::
-OSR Bullet.png::CompressedTexture2D::166583747570609806::1716083711::1716083726::1::::<><>::
-OSR Castle.png::CompressedTexture2D::138005694487463709::1716082222::1716083735::1::::<><>::
+OSR Bullet.png::CompressedTexture2D::5573304489973539692::1716083711::1716775456::1::::<><>::
+OSR Castle.png::CompressedTexture2D::7528136003518569977::1716082222::1716775456::1::::<><>::
 OSR Logo.png::CompressedTexture2D::8086051532283631372::1716519206::1716519208::1::::<><>::
 OSR Player.png::CompressedTexture2D::4089535135911662428::1716082637::1716082658::1::::<><>::
 OSR_anyplay.png::CompressedTexture2D::317342845759275112::1716669956::1716669959::1::::<><>::
 OSR_light.png::CompressedTexture2D::6469216834042184236::1716519598::1716519618::1::::<><>::
-player.gd::GDScript::-1::1716600471::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::8492843437549929027::1716671470::0::1::::<><>::res://player.gd<>uid://b73x1w3nhjlou::::res://health_component.tscn<>uid://byjabtn3uh7mm::::res://OSR Player.png<>uid://cyf0b53wd6efk::::res://OSR_light.png
-playmessage.gdshader::Shader::-1::1716686991::0::1::::<><>::
+player.gd::GDScript::-1::1716775160::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::8492843437549929027::1716775393::0::1::::<><>::res://player.gd<>uid://b73x1w3nhjlou::::res://health_component.tscn<>uid://byjabtn3uh7mm::::res://OSR Player.png<>uid://cyf0b53wd6efk::::res://OSR_light.png
+playmessage.gdshader::Shader::-1::1716775393::0::1::::<><>::
+pressanyplay.gdshader::Shader::-1::1716687374::0::1::::<><>::
 rebuild brick background.png::CompressedTexture2D::6161185433715419278::1716517906::1716517910::1::::<><>::
 rebuild brick menu background.png::CompressedTexture2D::6635905910601387970::1716519053::1716519056::1::::<><>::
 rebuild dark background.png::CompressedTexture2D::8471111128127485723::1715945081::1715945095::1::::<><>::
+unaffected_canvasitem.tres::CanvasItemMaterial::4029061506900732328::1716775281::0::1::::<><>::
 ::res://Global/::1716670145
 Game.gd::GDScript::-1::1716670145::0::1::::<>Node<>::
