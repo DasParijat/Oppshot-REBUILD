@@ -41,6 +41,7 @@ func castle_load(player_type):
 	
 
 func set_game():
+	$gamestart_audio.play()
 	$WASD_counter.text = str(Game.WASD_WINS)
 	$WASD_counter.modulate = Game.WASD_color
 	$ARW_counter.text = str(Game.ARW_WINS)

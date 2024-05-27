@@ -46,5 +46,5 @@ offset_right = 768.0
 offset_bottom = 650.0
 text = "Play"
 
-[connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Control/Play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed"]

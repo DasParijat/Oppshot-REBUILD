@@ -19,6 +19,7 @@ func _process(delta):
 func _on_area_2d_area_entered(area):
 	var tween = create_tween()
 	if health_component && can_damaged:
+		$hit_audio.play()
 		health_component.take_damage()
 		var health_size = (health_component.health/5.0) + 0.2
 		tween.tween_property($".", "scale", Vector2(health_size,health_size), 0.2)
@@ -28,25 +29,21 @@ func _on_area_2d_area_entered(area):
 
 func death_condition(tween):
 	if health_component.health <= 0 && can_damaged:
-		#await tween.finished
+		$death_audio.play()
 		can_damaged = false
-		tween.tween_property($".", "scale", Vector2(0,0), 0.2)
-		#print(Game.WASD_numcastles)
+		tween.tween_property($".", "scale", Vector2(0,0), 1)
 		if PLAYER_TYPE == "ARW":
 			Game.ARW_numcastles -= 1
+			await tween.finished
 			if Game.ARW_numcastles <= 0:
 				Game.WASD_WINS += 1
 				Game.WINNER = "WASD"
-				#print(Game.WASD_WINS)
-				#print("WASD WON!")
 		else:
 			Game.WASD_numcastles -= 1
 			#print(Game.ARW_numcastles)
+			await tween.finished
 			if Game.WASD_numcastles <= 0:
 				Game.ARW_WINS += 1
 				Game.WINNER = "ARW"
-				#print(Game.ARW_WINS)
-				#print("ARW WON!")
-		await tween.finished
 		queue_free()
 

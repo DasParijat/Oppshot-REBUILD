@@ -77,6 +77,7 @@ func _on_timer_timeout():
 func _on_area_2d_area_entered(area):
 	var tween = create_tween()
 	if health_component && can_damaged:
+		$hit_audio.play() 
 		health_component.take_damage()
 		print(health_component.health)
 		var health_size = (health_component.health/10.0) + 0.5
@@ -96,6 +97,7 @@ func death_condition(tween):
 	if health_component.health <= 0 && can_damaged:
 		#use can_move to stop movement while player grows back to size
 		#create timer to have more space between moving
+		$death_audio.play()
 		can_shoot = false
 		can_move = false
 		can_damaged = false
