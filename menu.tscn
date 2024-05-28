@@ -1,12 +1,41 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1qwuga4ru4k7"]
+[gd_scene load_steps=14 format=3 uid="uid://b1qwuga4ru4k7"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_350up"]
 [ext_resource type="Texture2D" uid="uid://c1sqnvmhbvv0e" path="res://rebuild brick menu background.png" id="2_ot0b6"]
 [ext_resource type="Material" uid="uid://bxnyb331pc68k" path="res://unaffected_canvasitem.tres" id="3_02snu"]
 [ext_resource type="Texture2D" uid="uid://dng7c78gxc5au" path="res://OSR Logo.png" id="3_gnvm5"]
 [ext_resource type="Texture2D" uid="uid://bal04a68ict75" path="res://OSR_spacekeyplay.png" id="5_7xh1n"]
+[ext_resource type="Texture2D" uid="uid://cmopo5fbd5bjw" path="res://OSR_audioOff.png" id="6_eqop3"]
+[ext_resource type="Texture2D" uid="uid://eseiehj5i2vh" path="res://OSR_audioOn.png" id="7_h0l6p"]
 
-[sub_resource type="Theme" id="Theme_02tk0"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_fwdw5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_eqop3")
+}],
+"loop": true,
+"name": &"audio_off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_h0l6p")
+}],
+"loop": true,
+"name": &"audio_on",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fnrjj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_403ht"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tx3hq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_77s3r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xny86"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_350up")
@@ -30,21 +59,24 @@ position = Vector2(586, 680)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("5_7xh1n")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-theme = SubResource("Theme_02tk0")
+[node name="SFXButtonSprite" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.352941)
+position = Vector2(65, 815)
+scale = Vector2(0.276667, 0.276667)
+sprite_frames = SubResource("SpriteFrames_fwdw5")
+animation = &"audio_off"
 
-[node name="Play" type="Button" parent="Control"]
-visible = false
-layout_mode = 2
-offset_left = 380.0
-offset_top = 538.0
-offset_right = 768.0
-offset_bottom = 650.0
-text = "Play"
+[node name="SFXButton" type="Button" parent="SFXButtonSprite"]
+offset_left = -148.193
+offset_top = -144.578
+offset_right = 140.807
+offset_bottom = 144.422
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fnrjj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_403ht")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tx3hq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_77s3r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xny86")
+icon_alignment = 1
+expand_icon = true
 
-[connection signal="pressed" from="Control/Play" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="SFXButtonSprite/SFXButton" to="." method="_on_sfx_button_pressed"]

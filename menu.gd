@@ -1,10 +1,12 @@
 extends Node2D
 
+@onready var SFX_BUS_ID = AudioServer.get_bus_index("SFX")
+
 var time : float
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#$"Play Message".material.set_shader_parameter("flash_modifier", 0.0)
-	pass
+	$SFXButtonSprite.play("audio_on")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -13,14 +15,6 @@ func _process(delta):
 	$"Play Message".self_modulate.a = get_sine(5,0.25,0.75)
 	if Input.is_action_pressed("ui_accept"):
 		get_tree().change_scene_to_file("res://main_game.tscn")
-
-
-#func _on_button_pressed():
-	#get_tree().change_scene_to_file("res://main_game.tscn")
-	
-
-func _on_play_pressed():
-	get_tree().change_scene_to_file("res://main_game.tscn")
 	
 func get_sine(f, a, b):
 	# f = frequency
@@ -32,3 +26,14 @@ func get_sine(f, a, b):
 	#$"Play Message".material.set_shader_parameter("flash_modifier", 0.0)
 	#flash()
 	#$"Play Message/flash_timer".finished
+
+
+func _on_sfx_button_pressed():
+	print("clicked")
+	if $SFXButtonSprite.animation == "audio_off":
+		$SFXButtonSprite.play("audio_on")
+		AudioServer.set_bus_mute(SFX_BUS_ID, false)
+	else:
+		$SFXButtonSprite.play("audio_off")
+		AudioServer.set_bus_mute(SFX_BUS_ID, true)
+		

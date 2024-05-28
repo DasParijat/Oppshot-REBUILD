@@ -1,3 +1,5 @@
+Button
+AnimatedSprite2D
 AudioStreamPlayer2D
 Timer
 Sprite2D
@@ -11,4 +13,3 @@ VBoxContainer
 MarginContainer
 Label
 Node
-RichTextLabel
