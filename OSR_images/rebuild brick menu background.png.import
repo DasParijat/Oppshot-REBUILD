@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct1r3ap4dy5f3"
-path="res://.godot/imported/rebuild brick background.png-3678e690f85489306f418e5b20d688e4.ctex"
+uid="uid://c1sqnvmhbvv0e"
+path="res://.godot/imported/rebuild brick menu background.png-1f48b9c67d8d58146b87a186ec0cb043.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rebuild brick background.png"
-dest_files=["res://.godot/imported/rebuild brick background.png-3678e690f85489306f418e5b20d688e4.ctex"]
+source_file="res://OSR_images/rebuild brick menu background.png"
+dest_files=["res://.godot/imported/rebuild brick menu background.png-1f48b9c67d8d58146b87a186ec0cb043.ctex"]
 
 [params]
 

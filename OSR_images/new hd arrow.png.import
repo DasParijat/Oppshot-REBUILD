@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cln0rml06htay"
-path="res://.godot/imported/OSR Bullet.png-6d0dd6c8106ac09ef7dfceb83d2a3583.ctex"
+uid="uid://ccfxpqrll5wjv"
+path="res://.godot/imported/new hd arrow.png-4457d1d0dc46304354c7f7ecf46a2a95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OSR Bullet.png"
-dest_files=["res://.godot/imported/OSR Bullet.png-6d0dd6c8106ac09ef7dfceb83d2a3583.ctex"]
+source_file="res://OSR_images/new hd arrow.png"
+dest_files=["res://.godot/imported/new hd arrow.png-4457d1d0dc46304354c7f7ecf46a2a95.ctex"]
 
 [params]
 

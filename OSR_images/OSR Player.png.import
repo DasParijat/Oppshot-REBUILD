@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eseiehj5i2vh"
-path="res://.godot/imported/OSR_audioOn.png-0404facec90bc2de3aba0a2c17c01517.ctex"
+uid="uid://byjabtn3uh7mm"
+path="res://.godot/imported/OSR Player.png-c0012844992bc33069bc92c807149e95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OSR_audioOn.png"
-dest_files=["res://.godot/imported/OSR_audioOn.png-0404facec90bc2de3aba0a2c17c01517.ctex"]
+source_file="res://OSR_images/OSR Player.png"
+dest_files=["res://.godot/imported/OSR Player.png-c0012844992bc33069bc92c807149e95.ctex"]
 
 [params]
 

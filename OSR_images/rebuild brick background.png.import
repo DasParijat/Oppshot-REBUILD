@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bal04a68ict75"
-path="res://.godot/imported/OSR_spacekeyplay.png-5c8f6f5f55efcef703392d06a87b08fa.ctex"
+uid="uid://ct1r3ap4dy5f3"
+path="res://.godot/imported/rebuild brick background.png-96dc33387cbf82c92be8a4e21f1cf9c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OSR_spacekeyplay.png"
-dest_files=["res://.godot/imported/OSR_spacekeyplay.png-5c8f6f5f55efcef703392d06a87b08fa.ctex"]
+source_file="res://OSR_images/rebuild brick background.png"
+dest_files=["res://.godot/imported/rebuild brick background.png-96dc33387cbf82c92be8a4e21f1cf9c9.ctex"]
 
 [params]
 

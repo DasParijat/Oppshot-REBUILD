@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfixkg6jeqp2h"
-path="res://.godot/imported/OSR Castle.png-7c3e5762cc9a02d17e269cc5896b6a65.ctex"
+uid="uid://eseiehj5i2vh"
+path="res://.godot/imported/OSR_audioOn.png-58d2068412df26b65787f01ea7781dec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OSR Castle.png"
-dest_files=["res://.godot/imported/OSR Castle.png-7c3e5762cc9a02d17e269cc5896b6a65.ctex"]
+source_file="res://OSR_images/OSR_audioOn.png"
+dest_files=["res://.godot/imported/OSR_audioOn.png-58d2068412df26b65787f01ea7781dec.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyf0b53wd6efk"
-path="res://.godot/imported/OSR_light.png-e846ed27e27b609f6fc4c7b88f23738c.ctex"
+uid="uid://dng7c78gxc5au"
+path="res://.godot/imported/OSR Logo.png-4f1378abebf9e7fbedd8830ac89bd459.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OSR_light.png"
-dest_files=["res://.godot/imported/OSR_light.png-e846ed27e27b609f6fc4c7b88f23738c.ctex"]
+source_file="res://OSR_images/OSR Logo.png"
+dest_files=["res://.godot/imported/OSR Logo.png-4f1378abebf9e7fbedd8830ac89bd459.ctex"]
 
 [params]
 

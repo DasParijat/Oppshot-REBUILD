@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1sqnvmhbvv0e"
-path="res://.godot/imported/rebuild brick menu background.png-9f9169f1e6c6f175af745a92ad10b874.ctex"
+uid="uid://cln0rml06htay"
+path="res://.godot/imported/OSR Bullet.png-bed657c9d10c58e173fce7cd992d66e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rebuild brick menu background.png"
-dest_files=["res://.godot/imported/rebuild brick menu background.png-9f9169f1e6c6f175af745a92ad10b874.ctex"]
+source_file="res://OSR_images/OSR Bullet.png"
+dest_files=["res://.godot/imported/OSR Bullet.png-bed657c9d10c58e173fce7cd992d66e5.ctex"]
 
 [params]
 

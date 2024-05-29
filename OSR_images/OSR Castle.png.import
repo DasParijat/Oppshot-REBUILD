@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dng7c78gxc5au"
-path="res://.godot/imported/OSR Logo.png-703b5e0729e84ffc5b14393086909536.ctex"
+uid="uid://dfixkg6jeqp2h"
+path="res://.godot/imported/OSR Castle.png-9e2e962b317831ffc69bfdfc5bedebcf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OSR Logo.png"
-dest_files=["res://.godot/imported/OSR Logo.png-703b5e0729e84ffc5b14393086909536.ctex"]
+source_file="res://OSR_images/OSR Castle.png"
+dest_files=["res://.godot/imported/OSR Castle.png-9e2e962b317831ffc69bfdfc5bedebcf.ctex"]
 
 [params]
 

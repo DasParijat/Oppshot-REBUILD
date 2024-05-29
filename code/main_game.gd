@@ -7,8 +7,10 @@ func _ready():
 	set_game()
 	
 func set_game():
+	Game.ROUND += 1
 	$gamestart_audio.play()
 	
+	# initialize win counters for both sides
 	$WASD_counter.text = str(Game.WASD_WINS)
 	$WASD_counter.modulate = Game.WASD_color
 	$ARW_counter.text = str(Game.ARW_WINS)

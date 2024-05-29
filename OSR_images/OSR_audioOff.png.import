@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsxp7y2onet4f"
-path="res://.godot/imported/rebuild dark background.png-89d1c4148f04c2aade70e33b69b5b757.ctex"
+uid="uid://cmopo5fbd5bjw"
+path="res://.godot/imported/OSR_audioOff.png-e59b76d235b01e6a32fce522404cd745.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rebuild dark background.png"
-dest_files=["res://.godot/imported/rebuild dark background.png-89d1c4148f04c2aade70e33b69b5b757.ctex"]
+source_file="res://OSR_images/OSR_audioOff.png"
+dest_files=["res://.godot/imported/OSR_audioOff.png-e59b76d235b01e6a32fce522404cd745.ctex"]
 
 [params]
 

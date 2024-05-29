@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eryucnmg6o2c"
-path="res://.godot/imported/OSR_anyplay.png-5cc8900ee0e4a3e50c6a390645f09dd9.ctex"
+uid="uid://bal04a68ict75"
+path="res://.godot/imported/OSR_spacekeyplay.png-193028d00132cc738d8fc78815b172b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OSR_anyplay.png"
-dest_files=["res://.godot/imported/OSR_anyplay.png-5cc8900ee0e4a3e50c6a390645f09dd9.ctex"]
+source_file="res://OSR_images/OSR_spacekeyplay.png"
+dest_files=["res://.godot/imported/OSR_spacekeyplay.png-193028d00132cc738d8fc78815b172b3.ctex"]
 
 [params]
 

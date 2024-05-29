@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dbo670rvk66hp"]
 
-[ext_resource type="Script" path="res://main_game.gd" id="1_1f1cw"]
-[ext_resource type="Texture2D" uid="uid://ct1r3ap4dy5f3" path="res://rebuild brick background.png" id="2_nlibk"]
+[ext_resource type="Script" path="res://code/main_game.gd" id="1_1f1cw"]
+[ext_resource type="Texture2D" uid="uid://ct1r3ap4dy5f3" path="res://OSR_images/rebuild brick background.png" id="2_nlibk"]
 [ext_resource type="AudioStream" uid="uid://ck1q4k2gn6t6s" path="res://OSR_audio/OSR_gameset.mp3" id="3_458lk"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gbmt2"]

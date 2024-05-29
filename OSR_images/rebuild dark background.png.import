@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byjabtn3uh7mm"
-path="res://.godot/imported/OSR Player.png-024d4cb173acf4a29d58f7edca87f303.ctex"
+uid="uid://dsxp7y2onet4f"
+path="res://.godot/imported/rebuild dark background.png-1d482fcf88bcda1ad1de6fcea6a869eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OSR Player.png"
-dest_files=["res://.godot/imported/OSR Player.png-024d4cb173acf4a29d58f7edca87f303.ctex"]
+source_file="res://OSR_images/rebuild dark background.png"
+dest_files=["res://.godot/imported/rebuild dark background.png-1d482fcf88bcda1ad1de6fcea6a869eb.ctex"]
 
 [params]
 

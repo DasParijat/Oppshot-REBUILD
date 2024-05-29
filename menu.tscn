@@ -1,12 +1,12 @@
 [gd_scene load_steps=14 format=3 uid="uid://b1qwuga4ru4k7"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_350up"]
-[ext_resource type="Texture2D" uid="uid://c1sqnvmhbvv0e" path="res://rebuild brick menu background.png" id="2_ot0b6"]
+[ext_resource type="Script" path="res://code/menu.gd" id="1_350up"]
+[ext_resource type="Texture2D" uid="uid://c1sqnvmhbvv0e" path="res://OSR_images/rebuild brick menu background.png" id="2_ot0b6"]
 [ext_resource type="Material" uid="uid://bxnyb331pc68k" path="res://unaffected_canvasitem.tres" id="3_02snu"]
-[ext_resource type="Texture2D" uid="uid://dng7c78gxc5au" path="res://OSR Logo.png" id="3_gnvm5"]
-[ext_resource type="Texture2D" uid="uid://bal04a68ict75" path="res://OSR_spacekeyplay.png" id="5_7xh1n"]
-[ext_resource type="Texture2D" uid="uid://cmopo5fbd5bjw" path="res://OSR_audioOff.png" id="6_eqop3"]
-[ext_resource type="Texture2D" uid="uid://eseiehj5i2vh" path="res://OSR_audioOn.png" id="7_h0l6p"]
+[ext_resource type="Texture2D" uid="uid://dng7c78gxc5au" path="res://OSR_images/OSR Logo.png" id="3_gnvm5"]
+[ext_resource type="Texture2D" uid="uid://bal04a68ict75" path="res://OSR_images/OSR_spacekeyplay.png" id="5_7xh1n"]
+[ext_resource type="Texture2D" uid="uid://cmopo5fbd5bjw" path="res://OSR_images/OSR_audioOff.png" id="6_eqop3"]
+[ext_resource type="Texture2D" uid="uid://eseiehj5i2vh" path="res://OSR_images/OSR_audioOn.png" id="7_h0l6p"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fwdw5"]
 animations = [{

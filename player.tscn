@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://ds885jsafic2v"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_r75nm"]
+[ext_resource type="Script" path="res://code/player.gd" id="1_cy5qq"]
 [ext_resource type="PackedScene" uid="uid://b73x1w3nhjlou" path="res://health_component.tscn" id="3_da2f4"]
-[ext_resource type="Texture2D" uid="uid://byjabtn3uh7mm" path="res://OSR Player.png" id="3_ek3vw"]
-[ext_resource type="Texture2D" uid="uid://cyf0b53wd6efk" path="res://OSR_light.png" id="4_4qx66"]
+[ext_resource type="Texture2D" uid="uid://byjabtn3uh7mm" path="res://OSR_images/OSR Player.png" id="3_yulo7"]
+[ext_resource type="Texture2D" uid="uid://cyf0b53wd6efk" path="res://OSR_images/OSR_light.png" id="4_mcntt"]
 [ext_resource type="AudioStream" uid="uid://b3n4s3gdlpxha" path="res://OSR_audio/OSR_hitplayer.mp3" id="5_rmse8"]
 [ext_resource type="AudioStream" uid="uid://ccdxcsjr4udv0" path="res://OSR_audio/OSR_playerdown.mp3" id="6_iw07c"]
 
@@ -11,7 +11,7 @@
 size = Vector2(37, 60)
 
 [node name="player" type="CharacterBody2D" node_paths=PackedStringArray("health_component")]
-script = ExtResource("1_r75nm")
+script = ExtResource("1_cy5qq")
 health_component = NodePath("health component")
 
 [node name="Area2D" type="Area2D" parent="." groups=["hittable"]]
@@ -23,13 +23,13 @@ shape = SubResource("RectangleShape2D_unv6t")
 [node name="health component" parent="." instance=ExtResource("3_da2f4")]
 
 [node name="NewHdArrow" type="Sprite2D" parent="."]
-texture = ExtResource("3_ek3vw")
+texture = ExtResource("3_yulo7")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(55, 1)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-texture = ExtResource("4_4qx66")
+texture = ExtResource("4_mcntt")
 texture_scale = 0.6
 
 [node name="StartGameTimer" type="Timer" parent="."]

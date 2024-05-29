@@ -30,7 +30,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	# if statement prevents players from instantly playing when round starts
-	if can_play:
+	# only exception is the very first round
+	if can_play || Game.ROUND < 2:
 		movement((PLAYER_TYPE + "_left"), (PLAYER_TYPE + "_right"), delta)
 		
 		# shooting
@@ -92,9 +93,11 @@ func death_condition(tween):
 		can_move = false
 		can_damaged = false
 		
+		# shrink player to nothing
 		tween.tween_property(self, "scale", Vector2(0,0), 0.2)
 		$NewHdArrow.self_modulate.a = 0.5
 		
+		# reset player but prevent them from playing
 		match(PLAYER_TYPE):
 			"WASD":
 				position = Vector2(250, 450)
@@ -104,7 +107,8 @@ func death_condition(tween):
 				position = Vector2(923, 450)
 				tween.tween_property(self, "scale", Vector2(-1.5,1.5), 1.5)
 				Game.ARW_alive = false
-				
+		
+		# Allow player to play again		
 		await tween.finished
 		can_move = true
 		$RespawnTimer.start()
