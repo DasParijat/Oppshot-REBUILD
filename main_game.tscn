@@ -27,8 +27,6 @@ color = Color(0.435294, 0.419608, 0.494118, 1)
 wait_time = 0.005
 one_shot = true
 
-[node name="PlayerRespawnTimer" type="Timer" parent="."]
-
 [node name="WASD_counter" type="Label" parent="."]
 top_level = true
 material = SubResource("CanvasItemMaterial_gbmt2")
@@ -59,4 +57,3 @@ stream = ExtResource("3_458lk")
 bus = &"SFX"
 
 [connection signal="timeout" from="ResetGameTimer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="PlayerRespawnTimer" to="." method="_on_player_respawn_timer_timeout"]

@@ -32,22 +32,22 @@ position = Vector2(55, 1)
 texture = ExtResource("4_4qx66")
 texture_scale = 0.6
 
-[node name="Timer" type="Timer" parent="."]
+[node name="ShootTimer" type="Timer" parent="."]
 wait_time = 0.15
 one_shot = true
 
 [node name="RespawnTimer" type="Timer" parent="."]
+wait_time = 0.6
 one_shot = true
-
-[node name="shoot_audio" type="AudioStreamPlayer2D" parent="."]
-bus = &"SFX"
 
 [node name="hit_audio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_rmse8")
+bus = &"SFX"
 
 [node name="death_audio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_iw07c")
+bus = &"SFX"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="RespawnTimer" to="." method="_on_respawn_timer_timeout"]

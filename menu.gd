@@ -5,12 +5,10 @@ extends Node2D
 var time : float
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#$"Play Message".material.set_shader_parameter("flash_modifier", 0.0)
 	$SFXButtonSprite.play("audio_on")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	# play_message_flash($"Play Message".self_modulate.a)
 	time += delta
 	$"Play Message".self_modulate.a = get_sine(5,0.25,0.75)
 	if Input.is_action_pressed("ui_accept"):
@@ -21,12 +19,6 @@ func get_sine(f, a, b):
 	# a = amount
 	# b = base
 	return (sin(time * f) * a) + b
-
-	#print("flash off")
-	#$"Play Message".material.set_shader_parameter("flash_modifier", 0.0)
-	#flash()
-	#$"Play Message/flash_timer".finished
-
 
 func _on_sfx_button_pressed():
 	print("clicked")

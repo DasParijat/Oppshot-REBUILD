@@ -9,67 +9,51 @@ var can_shoot : bool = true
 var can_move : bool = true
 var can_damaged : bool = true
 
-var MAX_HEALTH = 10
-var FRICTION = 0.2
-
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	health_component.health = MAX_HEALTH
-	var light = $PointLight2D
+func _ready():	
 	match(PLAYER_TYPE):
 		"WASD":
 			self.scale = Vector2(1.5, 1.5)
 			Game.WASD_alive = true
 			$NewHdArrow.modulate = Game.WASD_color
-			light.set_color(Game.WASD_color) #= Game.WASD_color
+			$PointLight2D.set_color(Game.WASD_color)
 		"ARW":
 			self.scale = Vector2(-1.5, 1.5)
 			Game.ARW_alive = true
 			$NewHdArrow.modulate = Game.ARW_color
-			light.set_color(Game.ARW_color)
-			#light.from_hsv = Game.ARW_color
+			$PointLight2D.set_color(Game.ARW_color)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#if Input.is_action_pressed(PLAYER_TYPE + "_right"):
-	#	position += Vector2(0, SPEED * delta)
-		
-	#if Input.is_action_pressed(PLAYER_TYPE + "_left"):
-	#	position += Vector2(0, -SPEED * delta)
-	
 	movement((PLAYER_TYPE + "_left"), (PLAYER_TYPE + "_right"), delta)
 	
+	# shooting
 	if Input.is_action_just_pressed(PLAYER_TYPE + "_shoot") && can_shoot:
-		#print(position.y)
 		can_shoot = false
 		shoot()
-		$Timer.start()
+		$ShootTimer.start()
 	
+	# deleting self before next round
 	if Game.WINNER != "NONE":
-		print("im gone fr yo")
-		queue_free()		
-	
+		queue_free()	
 		
 func movement(left_key, right_key, delta):
+	# both limits are 77 pixels away from the border
 	var upper_limit : int = 77
 	var lower_limit : int = 800 
 	if can_move:
 		if Input.is_action_pressed(left_key) && position.y >= upper_limit: 
 			position += Vector2(0, -SPEED * delta)
-			#print(DisplayServer.window_get_size())
 		
 		if Input.is_action_pressed(right_key) && position.y <= lower_limit: 
 			position += Vector2(0, SPEED * delta)
 		
-		
-
 func shoot():
-	bullet_scene = preload("res://bullet.tscn")
-	var b = bullet_scene.instantiate()
-	b.player_type = PLAYER_TYPE
-	get_tree().root.add_child(b)
-	b.transform = $Marker2D.global_transform
+	var bullet = preload("res://bullet.tscn").instantiate()
+	bullet.player_type = PLAYER_TYPE
+	bullet.transform = $Marker2D.global_transform
+	get_tree().root.add_child(bullet)
 
 func _on_timer_timeout():
 	can_shoot = true
@@ -79,43 +63,40 @@ func _on_area_2d_area_entered(area):
 	if health_component && can_damaged:
 		$hit_audio.play() 
 		health_component.take_damage()
-		print(health_component.health)
-		var health_size = (health_component.health/10.0) + 0.5
-		print(health_size)
-		var x_multiplier = 1
-		if PLAYER_TYPE == "ARW":
-			x_multiplier = -1
+		
+		# scaling variables for when health goes down
+		var health_size = (health_component.health/5.0) + 0.5
+		var x_multiplier : int
+		match(PLAYER_TYPE):
+			"WASD":
+				x_multiplier = 1
+			"ARW":
+				x_multiplier = -1
 		tween.tween_property(self, "scale", Vector2((health_size * x_multiplier),health_size), 0.2)
 	
 	death_condition(tween)
-		# console text
-		# var health_string : String = str(health_component.health)
-		# print(health_string + "HP left for " + PLAYER_TYPE)
 		
 func death_condition(tween):
-	# death condition
 	if health_component.health <= 0 && can_damaged:
-		#use can_move to stop movement while player grows back to size
-		#create timer to have more space between moving
 		$death_audio.play()
+		
 		can_shoot = false
 		can_move = false
 		can_damaged = false
+		
 		tween.tween_property(self, "scale", Vector2(0,0), 0.2)
-		#await tween.finished
-		#$RespawnTimer.start()
 		$NewHdArrow.self_modulate.a = 0.5
+		
 		match(PLAYER_TYPE):
 			"WASD":
-				position = Vector2(250 ,450)
-				tween.tween_property(self, "scale", Vector2(1.5,1.5), 1)
+				position = Vector2(250, 450)
+				tween.tween_property(self, "scale", Vector2(1.5,1.5), 1.5)
 				Game.WASD_alive = false
-				print("wasd dead")
 			"ARW":
-				position = Vector2(923 ,450)
-				tween.tween_property(self, "scale", Vector2(-1.5,1.5), 1)
+				position = Vector2(923, 450)
+				tween.tween_property(self, "scale", Vector2(-1.5,1.5), 1.5)
 				Game.ARW_alive = false
-				print("arw dead")
+				
 		await tween.finished
 		can_move = true
 		$RespawnTimer.start()
@@ -123,7 +104,6 @@ func death_condition(tween):
 func _on_respawn_timer_timeout():
 	$NewHdArrow.self_modulate.a = 1
 	can_shoot = true
-	can_move = true
 	can_damaged = true
-	health_component.health = 10
+	health_component.health = health_component.MAX_HEALTH
 

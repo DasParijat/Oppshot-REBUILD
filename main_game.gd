@@ -6,25 +6,38 @@ extends Node2D
 func _ready():
 	set_game()
 	
+func set_game():
+	$gamestart_audio.play()
+	
+	$WASD_counter.text = str(Game.WASD_WINS)
+	$WASD_counter.modulate = Game.WASD_color
+	$ARW_counter.text = str(Game.ARW_WINS)
+	$ARW_counter.modulate = Game.ARW_color
+	
+	Game.reset_max_castles()
+	
+	player_load("WASD")
+	castle_load("WASD")
+	player_load("ARW")
+	castle_load("ARW")
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Game.WINNER != "NONE":
 		$ResetGameTimer.start()
 		
-	if !Game.WASD_alive:
-		$PlayerRespawnTimer.start()
-		
-
 func player_load(player_type):
 	var player = preload("res://player.tscn").instantiate()
 	player.PLAYER_TYPE = player_type
 	player.SPEED = 500
 	player.name = player_type + " player"
+	
 	match(player_type):
 			"WASD":
 				player.position = Vector2(250 ,450)
 			"ARW":
 				player.position = Vector2(923 ,450)
+				
 	add_child(player)
 	
 func castle_load(player_type):	
@@ -32,30 +45,17 @@ func castle_load(player_type):
 		var castle = preload("res://castle.tscn").instantiate()
 		castle.PLAYER_TYPE = player_type
 		castle.name = player_type + "_castle" + str(i + 1)
+		
 		match(player_type):
 			"WASD":
 				castle.position = Vector2(98,146 + (i * y_spacing))
 			"ARW":
 				castle.position = Vector2(1075,146 + (i * y_spacing))
+				
 		add_child(castle)
-	
 
-func set_game():
-	$gamestart_audio.play()
-	$WASD_counter.text = str(Game.WASD_WINS)
-	$WASD_counter.modulate = Game.WASD_color
-	$ARW_counter.text = str(Game.ARW_WINS)
-	$ARW_counter.modulate = Game.ARW_color
-	Game.reset_max_castles()
-	player_load("WASD")
-	castle_load("WASD")
-	player_load("ARW")
-	castle_load("ARW")
 
-func _on_timer_timeout():
+func _on_timer_timeout(): # ResetGameTimer timeout
 	Game.WINNER = "NONE"
 	set_game()
 
-
-func _on_player_respawn_timer_timeout():
-	pass # Replace with function body.
