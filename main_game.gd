@@ -29,7 +29,7 @@ func _process(delta):
 func player_load(player_type):
 	var player = preload("res://player.tscn").instantiate()
 	player.PLAYER_TYPE = player_type
-	player.SPEED = 500
+	player.SPEED = 600
 	player.name = player_type + " player"
 	
 	match(player_type):

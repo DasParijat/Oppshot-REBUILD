@@ -5,7 +5,6 @@ const MAX_CASTLES = 3
 var WASD_WINS = 0
 var ARW_WINS = 0
 
-# Color8(102, 177, 255)
 var WASD_color = Color8(102, 177, 255)
 var ARW_color = Color8(255, 119, 102)
 

@@ -32,6 +32,10 @@ position = Vector2(55, 1)
 texture = ExtResource("4_4qx66")
 texture_scale = 0.6
 
+[node name="StartGameTimer" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+
 [node name="ShootTimer" type="Timer" parent="."]
 wait_time = 0.15
 one_shot = true
@@ -49,5 +53,6 @@ stream = ExtResource("6_iw07c")
 bus = &"SFX"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="StartGameTimer" to="." method="_on_start_game_timer_timeout"]
 [connection signal="timeout" from="ShootTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="RespawnTimer" to="." method="_on_respawn_timer_timeout"]

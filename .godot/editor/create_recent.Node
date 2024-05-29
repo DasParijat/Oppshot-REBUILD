@@ -1,7 +1,7 @@
+Timer
 Button
 AnimatedSprite2D
 AudioStreamPlayer2D
-Timer
 Sprite2D
 CanvasModulate
 CanvasGroup
@@ -12,4 +12,3 @@ Control
 VBoxContainer
 MarginContainer
 Label
-Node

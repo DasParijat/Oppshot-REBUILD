@@ -1,13 +1,14 @@
 extends CharacterBody2D
 
 @export var PLAYER_TYPE = ""
-@export var SPEED = 500
+@export var SPEED : int
 @export var bullet_scene : PackedScene
 @export var health_component : Node2D 
 
 var can_shoot : bool = true
 var can_move : bool = true
 var can_damaged : bool = true
+var can_play : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
@@ -23,20 +24,27 @@ func _ready():
 			$NewHdArrow.modulate = Game.ARW_color
 			$PointLight2D.set_color(Game.ARW_color)
 	
+	$StartGameTimer.start()
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	movement((PLAYER_TYPE + "_left"), (PLAYER_TYPE + "_right"), delta)
-	
-	# shooting
-	if Input.is_action_just_pressed(PLAYER_TYPE + "_shoot") && can_shoot:
-		can_shoot = false
-		shoot()
-		$ShootTimer.start()
-	
-	# deleting self before next round
-	if Game.WINNER != "NONE":
-		queue_free()	
+	# if statement prevents players from instantly playing when round starts
+	if can_play:
+		movement((PLAYER_TYPE + "_left"), (PLAYER_TYPE + "_right"), delta)
+		
+		# shooting
+		if Input.is_action_just_pressed(PLAYER_TYPE + "_shoot") && can_shoot:
+			can_shoot = false
+			shoot()
+			$ShootTimer.start()
+		
+		# deleting self before next round
+		if Game.WINNER != "NONE":
+			queue_free()	
+		
+func _on_start_game_timer_timeout():
+	can_play = true
 		
 func movement(left_key, right_key, delta):
 	# both limits are 77 pixels away from the border
@@ -106,4 +114,3 @@ func _on_respawn_timer_timeout():
 	can_shoot = true
 	can_damaged = true
 	health_component.health = health_component.MAX_HEALTH
-
