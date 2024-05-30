@@ -1,0 +1,8 @@
+res://bullet.tscn::1b4b9000dbc8c9684a316e76bc1f81c2::1717098683::res://.godot/exported/133200997/export-6350fccf6e14d2f0c891730ee1d2c6cd-bullet.scn
+res://castle.tscn::7ff49e169e4deda1f18ffbf95170e185::1717098683::res://.godot/exported/133200997/export-732742b466c6aa70c38e1abbeae7bceb-castle.scn
+res://default_bus_layout.tres::af8908a547d176fca36c310f3e4e6d3d::1717098043::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
+res://health_component.tscn::0d29544e30c103b28da02d9cc45abcf6::1717098684::res://.godot/exported/133200997/export-cc6e694d78ca91169173f7ed1b725ef3-health_component.scn
+res://main_game.tscn::ed52cff05986b83a2a7d21a185177ca0::1717098683::res://.godot/exported/133200997/export-52da0abab86e6d1a7311a08b23751124-main_game.scn
+res://menu.tscn::163e47e1d293743f7cc3fd4507545a85::1717098683::res://.godot/exported/133200997/export-a4951207776b25ee5c8b2b05c1463587-menu.scn
+res://player.tscn::62f8a041435fc878daf1526b91abd8cb::1717098683::res://.godot/exported/133200997/export-36a25e342948d0ceacc500772b5412b3-player.scn
+res://unaffected_canvasitem.tres::fab627a12efcc3a7d3cb671133c5333d::1716775281::res://.godot/exported/133200997/export-89fcf9827f474ecb39b9e68af5875be9-unaffected_canvasitem.res
