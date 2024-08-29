@@ -1,48 +1,48 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1717105454
-bullet.tscn::PackedScene::2022329743850582137::1717098683::0::1::::<><>::res://code/bullet.gd<>uid://cln0rml06htay::::res://OSR_images/OSR Bullet.png<>uid://cyf0b53wd6efk::::res://OSR_images/OSR_light.png
-castle.tscn::PackedScene::8399559261402835882::1717098683::0::1::::<><>::res://code/castle.gd<>uid://b73x1w3nhjlou::::res://health_component.tscn<>uid://dfixkg6jeqp2h::::res://OSR_images/OSR Castle.png<>uid://cyf0b53wd6efk::::res://OSR_images/OSR_light.png<>uid://b3n4s3gdlpxha::::res://OSR_audio/OSR_hitplayer.mp3<>uid://bxq1eiyxkbmfe::::res://OSR_audio/OSR_castledown.mp3
-default_bus_layout.tres::AudioBusLayout::1481144034859312011::1717105428::0::1::::<><>::
-export_presets.cfg::TextFile::-1::1717104239::0::1::::<><>::
-flash.gdshader::Shader::-1::1717105430::0::1::::<><>::
-health_component.tscn::PackedScene::4691710378067575668::1717098684::0::1::::<><>::res://code/health component.gd
-main_game.tscn::PackedScene::7260292895769079921::1717098683::0::1::::<><>::res://code/main_game.gd<>uid://ct1r3ap4dy5f3::::res://OSR_images/rebuild brick background.png<>uid://ck1q4k2gn6t6s::::res://OSR_audio/OSR_gameset.mp3
-menu.tscn::PackedScene::4245732468547125432::1717098683::0::1::::<><>::res://code/menu.gd<>uid://c1sqnvmhbvv0e::::res://OSR_images/rebuild brick menu background.png<>uid://bxnyb331pc68k::::res://unaffected_canvasitem.tres<>uid://dng7c78gxc5au::::res://OSR_images/OSR Logo.png<>uid://bal04a68ict75::::res://OSR_images/OSR_spacekeyplay.png<>uid://cmopo5fbd5bjw::::res://OSR_images/OSR_audioOff.png<>uid://eseiehj5i2vh::::res://OSR_images/OSR_audioOn.png
-OSR_thumbnail.png::CompressedTexture2D::6910225186981576458::1717030746::1717097479::1::::<><>::
-player.tscn::PackedScene::8492843437549929027::1717098683::0::1::::<><>::res://code/player.gd<>uid://b73x1w3nhjlou::::res://health_component.tscn<>uid://byjabtn3uh7mm::::res://OSR_images/OSR Player.png<>uid://cyf0b53wd6efk::::res://OSR_images/OSR_light.png<>uid://b3n4s3gdlpxha::::res://OSR_audio/OSR_hitplayer.mp3<>uid://ccdxcsjr4udv0::::res://OSR_audio/OSR_playerdown.mp3
-README.md::TextFile::-1::1717025040::0::1::::<><>::
-unaffected_canvasitem.tres::CanvasItemMaterial::4029061506900732328::1716775281::0::1::::<><>::
-::res://code/::1717098683
-bullet.gd::GDScript::-1::1716600044::0::1::::<>Area2D<>::
-castle.gd::GDScript::-1::1716948792::0::1::::<>StaticBody2D<>::
-health component.gd::GDScript::-1::1716317946::0::1::::<>Node2D<>::
-main_game.gd::GDScript::-1::1717098683::0::1::::<>Node2D<>::
-menu.gd::GDScript::-1::1716948227::0::1::::<>Node2D<>::
-player.gd::GDScript::-1::1717098683::0::1::::<>CharacterBody2D<>::
-::res://Global/::1717024538
-Game.gd::GDScript::-1::1717024538::0::1::::<>Node<>::
-::res://OSR_audio/::1716832639
-OSR_castledeath.mp3::AudioStreamMP3::1096200332172027700::1716804105::1716804147::1::::<><>::
-OSR_castledown.mp3::AudioStreamMP3::4035380374740888550::1716829941::1716830004::1::::<><>::
-OSR_gameset.mp3::AudioStreamMP3::5529427452514032580::1716803721::1716803836::1::::<><>::
-OSR_hitplayer.mp3::AudioStreamMP3::4380339633515553362::1716828990::1716829141::1::::<><>::
-OSR_playerdown.mp3::AudioStreamMP3::4920813210481373247::1716829874::1716832639::1::::<><>::
-::res://OSR_finalgame/::1717104315
-::res://OSR_finalgame/game/::1717104278
-index.apple-touch-icon.png::CompressedTexture2D::8122646420244505006::1717104238::1717104278::1::::<><>::
-index.icon.png::CompressedTexture2D::6357960881927038625::1717104238::1717104278::1::::<><>::
-index.png::CompressedTexture2D::9005092836262600828::1717104238::1717104278::1::::<><>::
-::res://OSR_images/::1717024091
-new hd arrow.png::CompressedTexture2D::4924965088325739487::1710335232::1717019709::1::::<><>::
-OSR Bullet.png::CompressedTexture2D::5573304489973539692::1716083711::1717023924::1::::<><>::
-OSR Castle.png::CompressedTexture2D::7528136003518569977::1716082222::1717023942::1::::<><>::
-OSR Logo.png::CompressedTexture2D::8086051532283631372::1716519206::1717023954::1::::<><>::
-OSR Player.png::CompressedTexture2D::4089535135911662428::1716082637::1717019732::1::::<><>::
-OSR_anyplay.png::CompressedTexture2D::317342845759275112::1716669956::1717024016::1::::<><>::
-OSR_audioOff.png::CompressedTexture2D::5644946119080744524::1716927736::1717024004::1::::<><>::
-OSR_audioOn.png::CompressedTexture2D::318171549803897277::1716927675::1717024010::1::::<><>::
-OSR_light.png::CompressedTexture2D::6469216834042184236::1716519598::1717024030::1::::<><>::
-OSR_spacekeyplay.png::CompressedTexture2D::2410698601229260442::1716858313::1717024036::1::::<><>::
-rebuild brick background.png::CompressedTexture2D::6161185433715419278::1716517906::1717024066::1::::<><>::
-rebuild brick menu background.png::CompressedTexture2D::6635905910601387970::1716519053::1717024080::1::::<><>::
-rebuild dark background.png::CompressedTexture2D::8471111128127485723::1715945081::1717024091::1::::<><>::
+::res://::1724963376
+bullet.tscn::PackedScene::2022329743850582137::1724963179::0::1::::<><>::res://code/bullet.gd<>uid://cln0rml06htay::::res://OSR_images/OSR Bullet.png<>uid://cyf0b53wd6efk::::res://OSR_images/OSR_light.png
+castle.tscn::PackedScene::8399559261402835882::1724963179::0::1::::<><>::res://code/castle.gd<>uid://b73x1w3nhjlou::::res://health_component.tscn<>uid://dfixkg6jeqp2h::::res://OSR_images/OSR Castle.png<>uid://cyf0b53wd6efk::::res://OSR_images/OSR_light.png<>uid://b3n4s3gdlpxha::::res://OSR_audio/OSR_hitplayer.mp3<>uid://bxq1eiyxkbmfe::::res://OSR_audio/OSR_castledown.mp3
+default_bus_layout.tres::AudioBusLayout::1481144034859312011::1724963382::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1724963179::0::1::::<><>::
+flash.gdshader::Shader::-1::1724963179::0::1::::<><>::
+health_component.tscn::PackedScene::4691710378067575668::1724963179::0::1::::<><>::res://code/health component.gd
+main_game.tscn::PackedScene::7260292895769079921::1724963179::0::1::::<><>::res://code/main_game.gd<>uid://ct1r3ap4dy5f3::::res://OSR_images/rebuild brick background.png<>uid://ck1q4k2gn6t6s::::res://OSR_audio/OSR_gameset.mp3
+menu.tscn::PackedScene::4245732468547125432::1724963179::0::1::::<><>::res://code/menu.gd<>uid://c1sqnvmhbvv0e::::res://OSR_images/rebuild brick menu background.png<>uid://bxnyb331pc68k::::res://unaffected_canvasitem.tres<>uid://dng7c78gxc5au::::res://OSR_images/OSR Logo.png<>uid://bal04a68ict75::::res://OSR_images/OSR_spacekeyplay.png<>uid://cmopo5fbd5bjw::::res://OSR_images/OSR_audioOff.png<>uid://eseiehj5i2vh::::res://OSR_images/OSR_audioOn.png
+OSR_thumbnail.png::CompressedTexture2D::6910225186981576458::1724963179::1724963383::1::::<><>::
+player.tscn::PackedScene::8492843437549929027::1724963179::0::1::::<><>::res://code/player.gd<>uid://b73x1w3nhjlou::::res://health_component.tscn<>uid://byjabtn3uh7mm::::res://OSR_images/OSR Player.png<>uid://cyf0b53wd6efk::::res://OSR_images/OSR_light.png<>uid://b3n4s3gdlpxha::::res://OSR_audio/OSR_hitplayer.mp3<>uid://ccdxcsjr4udv0::::res://OSR_audio/OSR_playerdown.mp3
+README.md::TextFile::-1::1724963179::0::1::::<><>::
+unaffected_canvasitem.tres::CanvasItemMaterial::4029061506900732328::1724963179::0::1::::<><>::
+::res://code/::1724963179
+bullet.gd::GDScript::-1::1724963179::0::1::::<>Area2D<>::
+castle.gd::GDScript::-1::1724963179::0::1::::<>StaticBody2D<>::
+health component.gd::GDScript::-1::1724963179::0::1::::<>Node2D<>::
+main_game.gd::GDScript::-1::1724963179::0::1::::<>Node2D<>::
+menu.gd::GDScript::-1::1724963179::0::1::::<>Node2D<>::
+player.gd::GDScript::-1::1724963179::0::1::::<>CharacterBody2D<>::
+::res://Global/::1724963178
+Game.gd::GDScript::-1::1724963178::0::1::::<>Node<>::
+::res://OSR_audio/::1724963178
+OSR_castledeath.mp3::AudioStreamMP3::1096200332172027700::1724963178::1724963382::1::::<><>::
+OSR_castledown.mp3::AudioStreamMP3::4035380374740888550::1724963178::1724963382::1::::<><>::
+OSR_gameset.mp3::AudioStreamMP3::5529427452514032580::1724963178::1724963382::1::::<><>::
+OSR_hitplayer.mp3::AudioStreamMP3::4380339633515553362::1724963178::1724963382::1::::<><>::
+OSR_playerdown.mp3::AudioStreamMP3::4920813210481373247::1724963178::1724963382::1::::<><>::
+::res://OSR_finalgame/::1724963178
+::res://OSR_finalgame/game/::1724963179
+index.apple-touch-icon.png::CompressedTexture2D::8122646420244505006::1724963178::1724963383::1::::<><>::
+index.icon.png::CompressedTexture2D::6357960881927038625::1724963178::1724963383::1::::<><>::
+index.png::CompressedTexture2D::9005092836262600828::1724963179::1724963383::1::::<><>::
+::res://OSR_images/::1724963179
+new hd arrow.png::CompressedTexture2D::4924965088325739487::1724963179::1724963382::1::::<><>::
+OSR Bullet.png::CompressedTexture2D::5573304489973539692::1724963179::1724963382::1::::<><>::
+OSR Castle.png::CompressedTexture2D::7528136003518569977::1724963179::1724963382::1::::<><>::
+OSR Logo.png::CompressedTexture2D::8086051532283631372::1724963179::1724963383::1::::<><>::
+OSR Player.png::CompressedTexture2D::4089535135911662428::1724963179::1724963382::1::::<><>::
+OSR_anyplay.png::CompressedTexture2D::317342845759275112::1724963179::1724963383::1::::<><>::
+OSR_audioOff.png::CompressedTexture2D::5644946119080744524::1724963179::1724963382::1::::<><>::
+OSR_audioOn.png::CompressedTexture2D::318171549803897277::1724963179::1724963382::1::::<><>::
+OSR_light.png::CompressedTexture2D::6469216834042184236::1724963179::1724963382::1::::<><>::
+OSR_spacekeyplay.png::CompressedTexture2D::2410698601229260442::1724963179::1724963382::1::::<><>::
+rebuild brick background.png::CompressedTexture2D::6161185433715419278::1724963179::1724963383::1::::<><>::
+rebuild brick menu background.png::CompressedTexture2D::6635905910601387970::1724963179::1724963382::1::::<><>::
+rebuild dark background.png::CompressedTexture2D::8471111128127485723::1724963179::1724963382::1::::<><>::

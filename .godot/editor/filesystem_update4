@@ -1,1 +1,13 @@
 res://default_bus_layout.tres
+res://menu.tscn
+res://code/main_game.gd
+res://code/player.gd
+res://flash.gdshader
+res://code/castle.gd
+res://code/health component.gd
+res://main_game.tscn
+res://player.tscn
+res://castle.tscn
+res://bullet.tscn
+res://health_component.tscn
+res://README.md

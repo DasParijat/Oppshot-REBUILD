@@ -58,4 +58,3 @@ func death_condition(tween):
 					Game.WINNER = "WASD"
 				
 		queue_free()
-

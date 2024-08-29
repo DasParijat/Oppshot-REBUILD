@@ -27,15 +27,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fnrjj"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xny86"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_77s3r"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_403ht"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tx3hq"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_77s3r"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xny86"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fnrjj"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_350up")
@@ -71,11 +71,11 @@ offset_left = -148.193
 offset_top = -144.578
 offset_right = 140.807
 offset_bottom = 144.422
-theme_override_styles/normal = SubResource("StyleBoxEmpty_fnrjj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xny86")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_77s3r")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_403ht")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_tx3hq")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_77s3r")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_xny86")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fnrjj")
 icon_alignment = 1
 expand_icon = true
 

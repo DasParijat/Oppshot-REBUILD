@@ -59,4 +59,3 @@ func castle_load(player_type):
 func _on_timer_timeout(): # ResetGameTimer timeout
 	Game.WINNER = "NONE"
 	set_game()
-

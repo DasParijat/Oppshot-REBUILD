@@ -5,6 +5,7 @@ Oppshot is a game that requires 2 people to play on the same computer
 (Or you just control both sides alone)
 Shoot down all 3 castles on the opposite side to win. Once someone 
 wins the game ends itself.
+
 WASD KEYS to move Blue
 ARROW KEYS to move Red
 
