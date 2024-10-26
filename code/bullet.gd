@@ -11,7 +11,7 @@ func _ready():
 		"ARW":
 			$Icon.modulate = Game.ARW_color
 			$PointLight2D.set_color(Game.ARW_color)
-		_: # default statement in java
+		_: # default statement in gdscript
 			$Icon.modulate = Color8(255, 255, 255)
 	
 func _process(delta):
